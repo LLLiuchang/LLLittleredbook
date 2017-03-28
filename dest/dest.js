@@ -35,10 +35,17 @@ define(['text!dest/dest.html','jquery','lazy','css!dest/dest.css'],function(html
         '<span class="liang">'+data.user.fans_total+'</span></div></div></div>'
         return str;
     }
+
+    function buy(){
+        $('.commodity').on('click',function(){
+            
+        })
+    }
     
     return{
         add:add,
         get:get,
-        img:img
+        img:img,
+        buy:buy
     }
 })

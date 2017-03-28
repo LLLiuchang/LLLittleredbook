@@ -14,6 +14,7 @@ define(['router','jquery','lazy'],function(Router,$){
             dest.add();
             dest.get();
             dest.img();
+            dest.buy();
         })
     })
     .route('#/dest',function(req,next){
