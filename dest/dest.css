@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+#s {
+  position: absolute; }
+
+.city {
+  margin-top: 50px;
+  height: 4.3rem;
+  background: #fff;
+  overflow-y: hidden; }
+  .city a {
+    color: #666666; }
+  .city ul {
+    list-style: none;
+    width: 200%;
+    display: flex; }
+    .city ul li {
+      text-align: center;
+      flex: 1;
+      font-size: 1.5rem;
+      color: #c5c5c5;
+      line-height: 4rem; }
+
+.body {
+  width: 100%; }
+  .body .left {
+    float: left;
+    width: 45%;
+    margin: 1rem; }
+  .body .right {
+    float: right;
+    width: 45%;
+    margin: 1rem 1rem 1rem 0; }
+  .body .commodity {
+    background: #fff;
+    margin-bottom: 1rem; }
+    .body .commodity img {
+      width: 100%; }
+    .body .commodity .text {
+      width: 100%;
+      padding: 1rem; }
+      .body .commodity .text p {
+        font-size: 1.6rem;
+        margin-bottom: 1rem; }
+      .body .commodity .text .tt {
+        width: 100%;
+        height: 5.4rem;
+        overflow: hidden; }
+      .body .commodity .text span {
+        color: #bababa;
+        font-size: 1.4rem; }
+    .body .commodity .mm {
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      -webkit-align-items: center; }
+      .body .commodity .mm span {
+        margin-top: 1rem;
+        color: #666666; }
+      .body .commodity .mm img {
+        margin-top: 1.5rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%; }
+      .body .commodity .mm .xin {
+        position: relative;
+        left: 1.2rem;
+        width: 1.5rem;
+        height: 1.5rem; }
+      .body .commodity .mm .liang {
+        position: relative;
+        left: 1.2rem; }
+
+/*# sourceMappingURL=dest.css.map */
