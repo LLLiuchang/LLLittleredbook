@@ -1,4 +1,4 @@
-define(['router','jquery','lazy'],function(Router,$){
+define(['router','jquery'],function(Router,$){
     
     var mm = new Router()
     .route('#/home',function(req,next){
@@ -6,7 +6,6 @@ define(['router','jquery','lazy'],function(Router,$){
         require(['home/home.js'],function(home){
             home.add();
             home.get();
-            home.img();
         })
     })
     .route('#/dest',function(req,next){
@@ -14,17 +13,15 @@ define(['router','jquery','lazy'],function(Router,$){
             dest.add();
             dest.get();
             dest.img();
-            dest.buy();
         })
-    })
-    .route('#/dest',function(req,next){
-        $('#aa').html('<h1>购物车</h1>')
     })
     .route('#/brand',function(req,next){
         $('#aa').html('<h1>个人中心</h1>')
     })
     .route('#/buy',function(req,next){
-        $('#aa').html('<h1>个人中心</h1>')
+        require(['buy/buy.js'],function(buy){
+            buy.add();
+        })
     })
     .route('#/korea',function(req,next){
         require(['dest/korea/korea.js'],function(korea){

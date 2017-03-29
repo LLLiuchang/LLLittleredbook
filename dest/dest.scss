@@ -9,13 +9,13 @@ html{
 }
 #s{
     position: absolute;
-    
+    display: block;
 }
 .city{
     margin-top:50px;
     height: 4.3rem;
     background: #fff;
-    
+    display: block;
     overflow-y:hidden; 
     a{
     color: #666666;
@@ -45,11 +45,14 @@ html{
         width: 45%;
         margin: 1rem 1rem 1rem 0;
     }
-    .commodity{
+    .commodity{display: inline-block;
         background: #fff;
         margin-bottom:1rem;
         img{
             width: 100%;
+        }
+        p{
+            color: black;
         }
         .text{
             width: 100%;

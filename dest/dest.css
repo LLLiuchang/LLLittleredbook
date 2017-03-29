@@ -8,12 +8,14 @@ html {
   font-size: 62.5%; }
 
 #s {
-  position: absolute; }
+  position: absolute;
+  display: block; }
 
 .city {
   margin-top: 50px;
   height: 4.3rem;
   background: #fff;
+  display: block;
   overflow-y: hidden; }
   .city a {
     color: #666666; }
@@ -39,10 +41,13 @@ html {
     width: 45%;
     margin: 1rem 1rem 1rem 0; }
   .body .commodity {
+    display: inline-block;
     background: #fff;
     margin-bottom: 1rem; }
     .body .commodity img {
       width: 100%; }
+    .body .commodity p {
+      color: black; }
     .body .commodity .text {
       width: 100%;
       padding: 1rem; }

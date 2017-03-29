@@ -1,6 +1,8 @@
-define(['text!dest/dest.html','jquery','lazy','css!dest/dest.css'],function(html,jquery,ss){
+define(['text!dest/dest.html','jquery','css!dest/dest.css'],function(html,jquery){
     function add(){
+        $('#s').css('display','block');
         $('#aa').html(html);
+        
     }
     function img(){
         $(function(){
@@ -10,7 +12,7 @@ define(['text!dest/dest.html','jquery','lazy','css!dest/dest.css'],function(html
     
     function get(){
         $.get('http://localhost:3000/dest',function(res){
-            console.log(res);
+            // console.log(res);
             var notes = res.notes;
             var left = [];
             var right = [];
@@ -29,23 +31,22 @@ define(['text!dest/dest.html','jquery','lazy','css!dest/dest.css'],function(html
         })
     }
     function getTemplate(data){
-        var str = '<div class="commodity"><img class="lazy" src="'+data.image+'"><div class="text"><p>'+data.title+'</p>'+
+        var str = '<a href="#/buy" class="commodity"><img class="lazy" src="'+data.image+'"><div class="text"><p>'+data.title+'</p>'+
         '<div class="tt"><span>'+data.desc+'</span></div><div class="mm"><img src="'+data.user.image+'"><span class="ming">'+
         data.user.nickname+'</span><img class="xin" src="//s.xiaohongshu.com/s/mobile-discovery/*/search/img/likes-icon-be12924.png">'+
-        '<span class="liang">'+data.user.fans_total+'</span></div></div></div>'
+        '<span class="liang">'+data.user.fans_total+'</span></div></div></a>'
         return str;
     }
 
-    function buy(){
-        $('.commodity').on('click',function(){
-            
-        })
-    }
+    // function buy(){
+    //     $('.body div').on('click','div',function(){
+    //         $('#aa').html()
+    //     })
+    // }
     
     return{
         add:add,
         get:get,
         img:img,
-        buy:buy
     }
 })

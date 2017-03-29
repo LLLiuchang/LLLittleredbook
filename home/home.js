@@ -1,4 +1,4 @@
-define(['text!home/home.html','jquery','lazy','css!home/home.css'],function(html,jquery){
+define(['text!home/home.html','jquery','css!home/home.css'],function(html,jquery){
     function add(){
         $('#aa').html(html);
          var mySwiper = new Swiper('.swiper-container', {
@@ -8,11 +8,7 @@ define(['text!home/home.html','jquery','lazy','css!home/home.css'],function(html
             paginationType : 'fraction',
          })
     }
-    function img(){
-         $(function(){
-            $("img").lazyload({effect: "fadeIn",});
-         });
-        }
+    
     function get(){
         $.get('http://localhost:3000/home',function(res){
             console.log(res);
@@ -31,15 +27,15 @@ define(['text!home/home.html','jquery','lazy','css!home/home.css'],function(html
         var str = '<div class="leave"><p>'+data.name+'</p><span>笔记·'+data.privacy+'</span>'
             +'<span>粉丝·'+data.followers+'</span><div class="img">'
         for(var i = 0; i< data.images.length;i++){
-            str += '<img data-original="'+data.images[i]+'" alt="">'
+            str += '<img src="'+data.images[i]+'" alt="">'
         }
-        str += '</div><div class="user"><img data-original="'+data.user.image+'" alt=""><span>'+data.user.nickname+'</span></div></div>'
+        str += '</div><div class="user"><img src="'+data.user.image+'" alt=""><span>'+data.user.nickname+'</span></div></div>'
         
         return str;
     }
     return{
         add:add,
         get:get,
-        img:img
+    
     }
 })
