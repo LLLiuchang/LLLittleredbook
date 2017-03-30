@@ -2,6 +2,7 @@ define(['text!dest/dest.html','jquery','css!dest/dest.css'],function(html,jquery
     function add(){
         $('#s').css('display','block');
         $('#aa').html(html);
+       
         
     }
     function img(){
@@ -28,21 +29,22 @@ define(['text!dest/dest.html','jquery','css!dest/dest.css'],function(html,jquery
             right= right.join('');
             $('.left').html(left);
             $('.right').html(right);
+            $('.body div').on('click','.commodity',function(e){
+             console.log($(this).get('id'));
         })
+        })
+         
     }
     function getTemplate(data){
-        var str = '<a href="#/buy" class="commodity"><img class="lazy" src="'+data.image+'"><div class="text"><p>'+data.title+'</p>'+
+        var str = '<a href="#" class="commodity id="'+data.id+'""><img class="lazy" src="'+data.image+'"><div class="text"><p>'+data.title+'</p>'+
         '<div class="tt"><span>'+data.desc+'</span></div><div class="mm"><img src="'+data.user.image+'"><span class="ming">'+
         data.user.nickname+'</span><img class="xin" src="//s.xiaohongshu.com/s/mobile-discovery/*/search/img/likes-icon-be12924.png">'+
         '<span class="liang">'+data.user.fans_total+'</span></div></div></a>'
         return str;
     }
+    
 
-    // function buy(){
-    //     $('.body div').on('click','div',function(){
-    //         $('#aa').html()
-    //     })
-    // }
+    
     
     return{
         add:add,

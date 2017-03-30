@@ -26,6 +26,28 @@ app.get('/dest',function(req,res){
         }
     })
 });
+app.get('/buy',function(req,res){
+    fs.readFile(__dirname + '/pulic/data/buys.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else{
+            console.log(data);
+            var json = JSON.parse(data);
+            res.json(json)
+        }
+    })
+});
+app.get('/buys',function(req,res){
+    fs.readFile(__dirname + '/pulic/data/buys.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else{
+            console.log(data);
+            var json = JSON.parse(data);
+            res.json(json)
+        }
+    })
+});
 //韩国
 app.get('/korea',function(req,res){
     fs.readFile(__dirname + '/pulic/data/korea.json',function(err,data){

@@ -1,4 +1,4 @@
-html {
+body, html {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -13,9 +13,13 @@ ul {
   list-style: none; }
 
 .nav {
+  width: 100%;
   height: 5rem;
   display: flex;
   background: white;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
   -webkit-align-items: center; }
   .nav span {
     font-size: 3rem;
@@ -26,6 +30,8 @@ ul {
     font-size: 2rem; }
 
 .tu {
+  position: relative;
+  top: 5rem;
   width: 100%;
   height: 37rem; }
   .tu div {
@@ -95,7 +101,7 @@ ul {
   width: 100%;
   display: none;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 666; }
   .choose_content .top {
@@ -107,5 +113,41 @@ ul {
     width: 100%;
     height: 50%;
     background: white; }
+    .choose_content .bottom .tou {
+      width: 100%;
+      display: flex; }
+      .choose_content .bottom .tou .qian {
+        color: red; }
+      .choose_content .bottom .tou img {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        top: -3rem;
+        margin-left: 2rem; }
+      .choose_content .bottom .tou ul {
+        margin-top: 2rem;
+        margin-left: 1rem; }
+      .choose_content .bottom .tou span {
+        font-size: 3rem;
+        color: #c5c5c5;
+        position: absolute;
+        right: 5%; }
+    .choose_content .bottom button {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      height: 2.2rem;
+      border-radius: 1.2rem;
+      background: #fff;
+      border: 1px solid #c5c5c5; }
+    .choose_content .bottom .jia {
+      color: #fff;
+      font-size: 2rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      height: 4rem;
+      background: #ff2741;
+      text-align: center;
+      line-height: 4rem; }
 
 /*# sourceMappingURL=buy.css.map */

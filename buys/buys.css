@@ -1,0 +1,31 @@
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+.shop {
+  margin-top: 5rem;
+  width: 100%;
+  padding-top: 1rem; }
+  .shop .pin {
+    height: 15rem;
+    margin-left: 2.3rem;
+    margin-bottom: 1rem;
+    background: #fff; }
+    .shop .pin .img {
+      width: 100%; }
+      .shop .pin .img img {
+        width: 100%; }
+  .shop .qq {
+    text-align: center; }
+    .shop .qq .ming {
+      font-size: 1.2rem;
+      margin-bottom: .5rem; }
+    .shop .qq .qian {
+      color: red;
+      font-size: 1.2rem;
+      text-align: left; }
+
+/*# sourceMappingURL=buys.css.map */

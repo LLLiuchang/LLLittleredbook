@@ -18,9 +18,19 @@ define(['router','jquery'],function(Router,$){
     .route('#/brand',function(req,next){
         $('#aa').html('<h1>个人中心</h1>')
     })
-    .route('#/buy',function(req,next){
+    
+    .route('#/buy/:id',function(req,next){
+        console.log(req)
+        var id = req.params.id
         require(['buy/buy.js'],function(buy){
             buy.add();
+            buy.get(id);
+        })
+    })
+    .route('#/buys',function(req,next){
+        require(['buys/buys.js'],function(buys){
+           buys.add();
+           buys.get();
         })
     })
     .route('#/korea',function(req,next){

@@ -1,0 +1,37 @@
+html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size:62.5%;
+    box-sizing: border-box;
+    // background: #c5c5c5;
+}
+.shop{
+    margin-top: 5rem;   
+    width: 100%;
+    padding-top: 1rem;
+    .pin{
+        height: 15rem;
+        margin-left: 2.3rem;
+        margin-bottom: 1rem;
+        background: #fff;
+        .img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        }
+        .qq{
+           text-align: center;
+           .ming{
+               font-size: 1.2rem;
+               margin-bottom: .5rem;
+           } 
+           .qian{
+               color: red;
+               font-size: 1.2rem;
+               text-align: left;
+           }
+        }
+    }
